@@ -15,7 +15,7 @@ const adduser = async (name, room, sId) => {
       room: room.trim().toLowerCase(),
 
       SocketId: sId,
-      
+
     });
     newUser.save();
     return { newUser: newUser };
@@ -58,6 +58,5 @@ const getAllUsersInRoom = async (room) =>{
           return user;
 
 }
-
 
 module.exports = { adduser, removeUser, getUser, getAllUsersInRoom};
